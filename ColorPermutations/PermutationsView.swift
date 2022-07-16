@@ -64,11 +64,34 @@ struct PermutationsView: View {
             .navigationTitle("Color Permutations")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
+                
+                Button() {
+                    
+                    for permutation in permutations {
+                        
+                        let snapshot = PatternView(
+                            rectangle: permutation[0],
+                            largeCircle: permutation[1],
+                            bigCircle: permutation[2],
+                            mediumCircle: permutation[3],
+                            smallCircle: permutation[4]
+                        )
+                            .padding()
+                            .snapshot()
+                        
+                        UIImageWriteToSavedPhotosAlbum(snapshot, nil, nil, nil)
+                    }
+                    
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                
                 Button() {
                     showingSheet.toggle()
                 } label: {
                     Image(systemName: "eyedropper.halffull")
                 }
+                
                 .sheet(isPresented: $showingSheet) {
                     ColorsSelectionView(colors: $colors)
                 }
