@@ -22,28 +22,49 @@ struct ContentView: View {
         
         let permutations = colors.permutations(array: colors)
         
-        VStack {
+        NavigationView {
             
             List {
                 
-                ForEach(permutations, id: \.self) { permutation in
+                Section {
                     
-                    HStack {
+                    ForEach(permutations, id: \.self) { permutation in
                         
-                        Spacer()
-                        
-                        PatternView(
-                            rectangle: permutation[0],
-                            largeCircle: permutation[1],
-                            bigCircle: permutation[2],
-                            mediumCircle: permutation[3],
-                            smallCircle: permutation[4]
-                        )
-                        
-                        Spacer()
+                        HStack {
+                            
+                            Spacer()
+                            
+                            PatternView(
+                                rectangle: permutation[0],
+                                largeCircle: permutation[1],
+                                bigCircle: permutation[2],
+                                mediumCircle: permutation[3],
+                                smallCircle: permutation[4]
+                            )
+                            .padding(EdgeInsets(top: 3, leading: 0, bottom: 3, trailing: 0))
+                            
+                            Spacer()
+                        }
+                        .listRowSeparator(.hidden)
                     }
+                    
+                } header: {
+                    
+                    let colorsList = colors.description
+                        .replacingOccurrences(of: "[", with: "")
+                        .replacingOccurrences(of: "]", with: "")
+                    
+                    Text("Results for \(colorsList)")
+                        .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+                    
+                } footer: {
+                    
+                    Text("\(permutations.count) permutations from \(colors.count) hardcoded colors")
+                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 6, trailing: 0))
                 }
             }
+            .navigationTitle("Color Permutations")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
