@@ -7,20 +7,20 @@
 
 import SwiftUI
 
+let colors : [Color] = [
+    .gray,
+    .red,
+    .green,
+    .yellow,
+    .blue
+]
+
+let permutations = colors.permutations(array: colors)
+
 
 struct ContentView: View {
     
-    let colors : [Color] = [
-        .gray,
-        .red,
-        .green,
-        .yellow,
-        .blue
-    ]
-    
     var body: some View {
-        
-        let permutations = colors.permutations(array: colors)
         
         NavigationView {
             
