@@ -10,14 +10,22 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let colors : [Color] = [
+        .gray,
+        .red,
+        .green,
+        .yellow,
+        .blue
+    ]
+    
     var body: some View {
         
         PatternView(
-            rectangle: .gray,
-            largeCircle: .red,
-            bigCircle: .green,
-            mediumCircle: .yellow,
-            smallCircle: .blue
+            rectangle: colors[0],
+            largeCircle: colors[1],
+            bigCircle: colors[2],
+            mediumCircle: colors[3],
+            smallCircle: colors[4]
         )
     }
 }
