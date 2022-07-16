@@ -27,13 +27,21 @@ struct ContentView: View {
             List {
                 
                 ForEach(permutations, id: \.self) { permutation in
-                    PatternView(
-                        rectangle: permutation[0],
-                        largeCircle: permutation[1],
-                        bigCircle: permutation[2],
-                        mediumCircle: permutation[3],
-                        smallCircle: permutation[4]
-                    )
+                    
+                    HStack {
+                        
+                        Spacer()
+                        
+                        PatternView(
+                            rectangle: permutation[0],
+                            largeCircle: permutation[1],
+                            bigCircle: permutation[2],
+                            mediumCircle: permutation[3],
+                            smallCircle: permutation[4]
+                        )
+                        
+                        Spacer()
+                    }
                 }
             }
         }
