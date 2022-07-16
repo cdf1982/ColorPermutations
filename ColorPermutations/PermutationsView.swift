@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PermutationsView.swift
 //  ColorPermutations
 //
 //  Created by Cesare Forelli on 16/07/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct PermutationsView: View {
     
     @State var colors : [Color] = [
         .gray,
@@ -122,8 +122,8 @@ struct PatternView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PermutationsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PermutationsView()
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct ColorPermutationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PermutationsView()
         }
     }
 }
