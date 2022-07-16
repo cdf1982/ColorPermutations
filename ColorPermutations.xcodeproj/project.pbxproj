@@ -12,6 +12,7 @@
 		5A6399942882B21300B1298B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6399932882B21300B1298B /* Assets.xcassets */; };
 		5A6399972882B21300B1298B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6399962882B21300B1298B /* Preview Assets.xcassets */; };
 		5AB99D632882B78100A2B95B /* Array+Permutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB99D622882B78100A2B95B /* Array+Permutations.swift */; };
+		5AE901672882DDE900F9C28A /* Color+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE901662882DDE900F9C28A /* Color+Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		5A6399932882B21300B1298B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A6399962882B21300B1298B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5AB99D622882B78100A2B95B /* Array+Permutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Permutations.swift"; sourceTree = "<group>"; };
+		5AE901662882DDE900F9C28A /* Color+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Order.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				5A63998F2882B21300B1298B /* ColorPermutationsApp.swift */,
 				5A6399912882B21300B1298B /* ContentView.swift */,
 				5AB99D622882B78100A2B95B /* Array+Permutations.swift */,
+				5AE901662882DDE900F9C28A /* Color+Order.swift */,
 				5A6399932882B21300B1298B /* Assets.xcassets */,
 				5A6399952882B21300B1298B /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				5A6399922882B21300B1298B /* ContentView.swift in Sources */,
 				5A6399902882B21300B1298B /* ColorPermutationsApp.swift in Sources */,
+				5AE901672882DDE900F9C28A /* Color+Order.swift in Sources */,
 				5AB99D632882B78100A2B95B /* Array+Permutations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
