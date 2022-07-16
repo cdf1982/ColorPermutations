@@ -65,6 +65,10 @@ struct PermutationsView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 
+                // TODO: This needs an alert: each permutation is saved to the photo library as a separate file!
+                
+                // TODO: The exported images are cropped at the bottom; I should look at [this approach](https://roddy.io/2021/02/25/export-swiftui-view-as-image/) instead of the current one in View+Snapshot
+                
                 Button() {
                     
                     for permutation in permutations {
