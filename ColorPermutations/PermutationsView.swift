@@ -53,16 +53,11 @@ struct PermutationsView: View {
                     
                 } header: {
                     
-                    let colorsList = colors.description
-                        .replacingOccurrences(of: "[", with: "")
-                        .replacingOccurrences(of: "]", with: "")
-                    
-                    Text("Results for \(colorsList)")
-                        .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+                    Text("") // I don't like how close the list is to the Large title without this...
                     
                 } footer: {
                     
-                    Text("\(permutations.count) permutations from \(colors.count) hardcoded colors")
+                    Text("\(permutations.count) permutations from \(colors.count) colors")
                         .padding(EdgeInsets(top: 5, leading: 0, bottom: 6, trailing: 0))
                 }
             }
