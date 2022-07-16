@@ -22,27 +22,20 @@ struct ContentView: View {
         
         let permutations = colors.permutations(array: colors)
         
-        let firstPermutation = permutations.first!
-        
-        let secondPermutation = permutations[1]
-        
         VStack {
             
-            PatternView(
-                rectangle: firstPermutation[0],
-                largeCircle: firstPermutation[1],
-                bigCircle: firstPermutation[2],
-                mediumCircle: firstPermutation[3],
-                smallCircle: firstPermutation[4]
-            )
-            
-            PatternView(
-                rectangle: secondPermutation[0],
-                largeCircle: secondPermutation[1],
-                bigCircle: secondPermutation[2],
-                mediumCircle: secondPermutation[3],
-                smallCircle: secondPermutation[4]
-            )
+            List {
+                
+                ForEach(permutations, id: \.self) { permutation in
+                    PatternView(
+                        rectangle: permutation[0],
+                        largeCircle: permutation[1],
+                        bigCircle: permutation[2],
+                        mediumCircle: permutation[3],
+                        smallCircle: permutation[4]
+                    )
+                }
+            }
         }
     }
 }
