@@ -20,13 +20,30 @@ struct ContentView: View {
     
     var body: some View {
         
-        PatternView(
-            rectangle: colors[0],
-            largeCircle: colors[1],
-            bigCircle: colors[2],
-            mediumCircle: colors[3],
-            smallCircle: colors[4]
-        )
+        let permutations = colors.permutations(array: colors)
+        
+        let firstPermutation = permutations.first!
+        
+        let secondPermutation = permutations[1]
+        
+        VStack {
+            
+            PatternView(
+                rectangle: firstPermutation[0],
+                largeCircle: firstPermutation[1],
+                bigCircle: firstPermutation[2],
+                mediumCircle: firstPermutation[3],
+                smallCircle: firstPermutation[4]
+            )
+            
+            PatternView(
+                rectangle: secondPermutation[0],
+                largeCircle: secondPermutation[1],
+                bigCircle: secondPermutation[2],
+                mediumCircle: secondPermutation[3],
+                smallCircle: secondPermutation[4]
+            )
+        }
     }
 }
 
