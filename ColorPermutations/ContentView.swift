@@ -15,7 +15,7 @@ let colors : [Color] = [
     .blue
 ]
 
-let permutations = colors.permutations(array: colors)
+let permutations = colors.permutations(array: colors).sorted(by: { $0[0].order >= $1[0].order })
 
 
 struct ContentView: View {
