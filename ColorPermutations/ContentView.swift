@@ -17,6 +17,10 @@ struct ContentView: View {
         .yellow,
         .blue
     ]
+    
+    @State private var showingSheet = false
+    
+    
     var body: some View {
         
         let permutations = colors.permutations(array: colors).sorted(by: { $0[0].hue >= $1[0].hue })
@@ -64,6 +68,16 @@ struct ContentView: View {
             }
             .navigationTitle("Color Permutations")
             .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                Button() {
+                    showingSheet.toggle()
+                } label: {
+                    Image(systemName: "eyedropper.halffull")
+                }
+                .sheet(isPresented: $showingSheet) {
+                    ColorsSelectionView(colors: $colors)
+                }
+            }
         }
     }
 }
