@@ -10,25 +10,22 @@ import SwiftUI
 
 extension Color {
     
-    var order : Int {
-        
-        get {
+    // Based on https://stackoverflow.com/a/36195290/3765705
             
-            switch self {
-                
-            case .gray:
-                return 1
-            case .red:
-                return 2
-            case .green:
-                return 3
-            case .yellow:
-                return 4
-            case .blue:
-                return 5
-            default:
-                return 0
-            }
-        }
+    var hue: CGFloat {
+        
+        let uiColor = UIColor(self)
+        
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        uiColor.getHue(&hue,
+                       saturation: &saturation,
+                       brightness: &brightness,
+                       alpha: &alpha)
+        
+        return hue
     }
 }
